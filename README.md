@@ -5,11 +5,22 @@ Only tested with a T-Embed CC1101, no other ESP32 device was tested, and it will
 
 The Tools menu currently has 4 entries in total, 2 of which are simple placeholders, so 2 functional tools as of right now:
 
-"Launch Server":
+**"Launch Server":**
 Initiates an http server, you first connect to a Wi-Fi network of your choosing, you select an html/index file, you enter the port you want the server to run at (Default port is 8000), afterwards you are back to the main menu of Bruce and your server will be running in the background and logging requests to the server in a directory titled "ServerPCAP", contrary to the name of the directory, these are just simple text files with the .log extension, but the logs are quite detailed so there is that.
 
-"Probe Logger":
+**"Probe Logger":**
 A dedicated Wi-Fi probe scanning and logging tool, passively scans nearby Wi-Fi probes, and logs each unique SSID alongside how many times it has been probed into a text file in a neatly formatted line-by-line style, the directory is titled "ProbeLogs" and each time the Probe Logger is launched or restarted a new log/text file is created on the directory with the naming sequence "ProbeLog1", "ProbeLog2" etc..
+
+**"Bridged AP":**
+Connects to an upstream WiFi network with actual working internet, then creates it's own WiFi AP and bridges them together, has optional Captive Portal and DNS proxy features built in.
+
+**New branch: Phone-GPS**
+This branch contains a new TCP GPS feature that let's a Bruce device use a Phone's GPS NMEA data as a pseudo-GPS Module, which works very well with WarDriving, it contains the Tools menu entry, and only 2 sub-menu entries:
+**"TCP GPS":** let's you establish a connection to your phone, by joining the same WiFi network, inputting the phone's LAN IP and which port the NMEA GPS stream is on.
+**"TCP-GPS WarDriving":** modified version of Bruce's WarDriving feature that works great with our phone GPS.
+
+Every other feature is ommited on this branch, and it is not supposed to be merged with the main branch or any other branch. Use it if you only need the GPS features.
+
 
 The tools mostly rely on the already implemented feature-sets of Bruce firmware.
 
@@ -22,7 +33,7 @@ I'm SleepyTiel and take care.
 All credits for the firmware goes to the creator of the Bruce firmware: bmorcelli and the dedicated community of contributors to Bruce firmware.
 
 
-Oh and this was almost entirely made with LLM coding, OpenCode Go GPT 5.6 Luna running inside VS Code and OpenCode.
+Oh and this was almost entirely made with LLM coding, OpenCode Go Muse Spark 1.3 running inside VS Code and OpenCode.
 
 
 ![Bruce Main Menu](./media/pictures/bruce_banner.jpg)
