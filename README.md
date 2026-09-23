@@ -19,6 +19,7 @@ This branch contains a new TCP GPS feature that let's a Bruce device use a Phone
 **"TCP GPS":** let's you establish a connection to your phone, by joining the same WiFi network, inputting the phone's LAN IP and which port the NMEA GPS stream is on.
 **"TCP-GPS WarDriving":** modified version of Bruce's WarDriving feature that works great with our phone GPS.
 
+Regarding the Phone-GPS Branch:
 Every other feature is ommited on this branch, and it is not supposed to be merged with the main branch or any other branch. Use it if you only need the GPS features.
 
 
